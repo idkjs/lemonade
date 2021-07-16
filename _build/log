@@ -1,0 +1,292 @@
+# dune build
+# OCAMLPARAM: unset
+# Workspace root: /Users/mando/Github/lemonade
+$ /usr/local/bin/nproc > /var/folders/jk/x59dhv6s7151k4mfmshf6v480000gn/T/duneea4370.output 2> /dev/null
+# Auto-detected concurrency: 8
+# disable binary cache
+$ /Users/mando/.opam/4.12.0/bin/ocamlc.opt -config > /var/folders/jk/x59dhv6s7151k4mfmshf6v480000gn/T/dune966be9.output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dyn
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/Users/mando/.opam/4.12.0/lib/toplevel"
+#  ; ocaml_bin = External "/Users/mando/.opam/4.12.0/bin"
+#  ; ocaml = Ok External "/Users/mando/.opam/4.12.0/bin/ocaml"
+#  ; ocamlc = External "/Users/mando/.opam/4.12.0/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/Users/mando/.opam/4.12.0/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/Users/mando/.opam/4.12.0/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/Users/mando/.opam/4.12.0/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/Users/mando/.opam/4.12.0/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/Users/mando/.opam/4.12.0/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/Users/mando/Github/lemonade"
+#        ; "INSIDE_DUNE" : "/Users/mando/Github/lemonade/_build/default"
+#        ; "MANPATH" :
+#            "/Users/mando/Github/lemonade/_build/install/default/bin"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/Users/mando/Github/lemonade/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/Users/mando/Github/lemonade/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/Users/mando/Github/lemonade/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_path = [ External "/Users/mando/.opam/4.12.0/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.12.0"
+#      ; standard_library_default = "/Users/mando/.opam/4.12.0/lib/ocaml"
+#      ; standard_library = "/Users/mando/.opam/4.12.0/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "cc"
+#      ; ocamlc_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; ocamlopt_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; bytecomp_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; native_c_libraries = [ "-lm" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "macosx"
+#      ; asm = [ "clang"; "-arch"; "x86_64"; "-Wno-trigraphs"; "-c" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-apple-darwin20.5.0"
+#      ; target = "x86_64-apple-darwin20.5.0"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X029"
+#      ; cmi_magic_number = "Caml1999I029"
+#      ; cmo_magic_number = "Caml1999O029"
+#      ; cma_magic_number = "Caml1999A029"
+#      ; cmx_magic_number = "Caml1999Y029"
+#      ; cmxa_magic_number = "Caml1999Z029"
+#      ; ast_impl_magic_number = "Caml1999M029"
+#      ; ast_intf_magic_number = "Caml1999N029"
+#      ; cmxs_magic_number = "Caml1999D029"
+#      ; cmt_magic_number = "Caml1999T029"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/refmt --print binary src/lemonade_Continuation.rei) > _build/default/src/lemonade_Continuation.rei.mli
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/refmt --print binary src/lemonade_Continuation.re) > _build/default/src/lemonade_Continuation.re.ml
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/refmt --print binary src/lemonade_Lazy.rei) > _build/default/src/lemonade_Lazy.rei.mli
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/refmt --print binary src/lemonade_Lazy.re) > _build/default/src/lemonade_Lazy.re.ml
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/refmt --print binary src/lemonade_List.rei) > _build/default/src/lemonade_List.rei.mli
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/refmt --print binary src/lemonade_List.re) > _build/default/src/lemonade_List.re.ml
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/refmt --print binary src/lemonade_Maybe.rei) > _build/default/src/lemonade_Maybe.rei.mli
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/refmt --print binary src/lemonade_Maybe.re) > _build/default/src/lemonade_Maybe.re.ml
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/refmt --print binary src/lemonade_Ok.rei) > _build/default/src/lemonade_Ok.rei.mli
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/refmt --print binary src/lemonade_Reader.re) > _build/default/src/lemonade_Reader.re.ml
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/refmt --print binary src/lemonade_Reader.rei) > _build/default/src/lemonade_Reader.rei.mli
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/refmt --print binary src/lemonade_Ok.re) > _build/default/src/lemonade_Ok.re.ml
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/refmt --print binary src/lemonade_Retry.rei) > _build/default/src/lemonade_Retry.rei.mli
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/refmt --print binary src/lemonade_Retry.re) > _build/default/src/lemonade_Retry.re.ml
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/refmt --print binary src/lemonade_State.rei) > _build/default/src/lemonade_State.rei.mli
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/refmt --print binary src/lemonade_State.re) > _build/default/src/lemonade_State.re.ml
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/refmt --print binary src/lemonade_Stream.re) > _build/default/src/lemonade_Stream.re.ml
+> File "src/lemonade_Stream.re", line 97, characters 6-9:
+> 97 |       let c = count^;
+>            ^^^
+> Error: let is a reserved keyword, it cannot be used as an identifier. Try `let_` or `_let` instead
+>
+[1]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/refmt --print binary src/lemonade_Stream.rei) > _build/default/src/lemonade_Stream.rei.mli
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/refmt --print binary src/lemonade_Success.rei) > _build/default/src/lemonade_Success.rei.mli
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/refmt --print binary src/lemonade_Type.rei) > _build/default/src/lemonade_Type.rei.mli
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/refmt --print binary src/lemonade_Success.re) > _build/default/src/lemonade_Success.re.ml
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/refmt --print binary src/lemonade_Type.re) > _build/default/src/lemonade_Type.re.ml
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/refmt --print binary src/lemonade_Writer.rei) > _build/default/src/lemonade_Writer.rei.mli
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/refmt --print binary src/lemonade_Writer.re) > _build/default/src/lemonade_Writer.re.ml
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -impl src/lemonade_Continuation.re.ml) > _build/default/src/.lemonade.objs/lemonade_Continuation.re.ml.d
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -intf src/lemonade_Continuation.rei.mli) > _build/default/src/.lemonade.objs/lemonade_Continuation.rei.mli.d
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/refmt --print binary ppx/ppx_lemonade.re) > _build/default/ppx/ppx_lemonade.re.ml
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -intf src/lemonade_Lazy.rei.mli) > _build/default/src/.lemonade.objs/lemonade_Lazy.rei.mli.d
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -impl src/lemonade_Lazy.re.ml) > _build/default/src/.lemonade.objs/lemonade_Lazy.re.ml.d
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -intf src/lemonade_List.rei.mli) > _build/default/src/.lemonade.objs/lemonade_List.rei.mli.d
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -impl src/lemonade_List.re.ml) > _build/default/src/.lemonade.objs/lemonade_List.re.ml.d
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -intf src/lemonade_Maybe.rei.mli) > _build/default/src/.lemonade.objs/lemonade_Maybe.rei.mli.d
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -impl src/lemonade_Maybe.re.ml) > _build/default/src/.lemonade.objs/lemonade_Maybe.re.ml.d
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -intf src/lemonade_Ok.rei.mli) > _build/default/src/.lemonade.objs/lemonade_Ok.rei.mli.d
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -impl src/lemonade_Reader.re.ml) > _build/default/src/.lemonade.objs/lemonade_Reader.re.ml.d
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -intf src/lemonade_Reader.rei.mli) > _build/default/src/.lemonade.objs/lemonade_Reader.rei.mli.d
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -impl src/lemonade_Ok.re.ml) > _build/default/src/.lemonade.objs/lemonade_Ok.re.ml.d
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -intf src/lemonade_Retry.rei.mli) > _build/default/src/.lemonade.objs/lemonade_Retry.rei.mli.d
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -impl src/lemonade_Retry.re.ml) > _build/default/src/.lemonade.objs/lemonade_Retry.re.ml.d
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -intf src/lemonade_State.rei.mli) > _build/default/src/.lemonade.objs/lemonade_State.rei.mli.d
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -impl src/lemonade_State.re.ml) > _build/default/src/.lemonade.objs/lemonade_State.re.ml.d
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -intf src/lemonade_Stream.rei.mli) > _build/default/src/.lemonade.objs/lemonade_Stream.rei.mli.d
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -intf src/lemonade_Success.rei.mli) > _build/default/src/.lemonade.objs/lemonade_Success.rei.mli.d
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -intf src/lemonade_Type.rei.mli) > _build/default/src/.lemonade.objs/lemonade_Type.rei.mli.d
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -impl src/lemonade_Success.re.ml) > _build/default/src/.lemonade.objs/lemonade_Success.re.ml.d
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -impl src/lemonade_Type.re.ml) > _build/default/src/.lemonade.objs/lemonade_Type.re.ml.d
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -intf src/lemonade_Writer.rei.mli) > _build/default/src/.lemonade.objs/lemonade_Writer.rei.mli.d
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamldep.opt -modules -impl src/lemonade_Writer.re.ml) > _build/default/src/.lemonade.objs/lemonade_Writer.re.ml.d
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.lemonade.objs/byte -no-alias-deps -opaque -open Lemonade -o src/.lemonade.objs/byte/lemonade__Lemonade_Type.cmi -c -intf src/lemonade_Type.rei.mli)
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.lemonade.objs/byte -intf-suffix .ml -no-alias-deps -opaque -open Lemonade -o src/.lemonade.objs/byte/lemonade__Lemonade_Type.cmo -c -impl src/lemonade_Type.re.ml)
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.lemonade.objs/byte -no-alias-deps -opaque -open Lemonade -o src/.lemonade.objs/byte/lemonade__Lemonade_Continuation.cmi -c -intf src/lemonade_Continuation.rei.mli)
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.lemonade.objs/byte -no-alias-deps -opaque -open Lemonade -o src/.lemonade.objs/byte/lemonade__Lemonade_Lazy.cmi -c -intf src/lemonade_Lazy.rei.mli)
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.lemonade.objs/byte -no-alias-deps -opaque -open Lemonade -o src/.lemonade.objs/byte/lemonade__Lemonade_Maybe.cmi -c -intf src/lemonade_Maybe.rei.mli)
+> File "src/lemonade_Maybe.rei", lines 50-52, characters 0-40:
+> 50 | /** [filter lst] is the list of values held by the options in [lst]. */
+> 51 | 
+> 52 | let filter: list(option('a)) => list('a).
+> Error (warning 32 [unused-value-declaration]): unused value filter.
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.lemonade.objs/byte -no-alias-deps -opaque -open Lemonade -o src/.lemonade.objs/byte/lemonade__Lemonade_List.cmi -c -intf src/lemonade_List.rei.mli)
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.lemonade.objs/byte -no-alias-deps -opaque -open Lemonade -o src/.lemonade.objs/byte/lemonade__Lemonade_Ok.cmi -c -intf src/lemonade_Ok.rei.mli)
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.lemonade.objs/byte -no-alias-deps -opaque -open Lemonade -o src/.lemonade.objs/byte/lemonade__Lemonade_Reader.cmi -c -intf src/lemonade_Reader.rei.mli)
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.lemonade.objs/byte -no-alias-deps -opaque -open Lemonade -o src/.lemonade.objs/byte/lemonade__Lemonade_Retry.cmi -c -intf src/lemonade_Retry.rei.mli)
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.lemonade.objs/byte -no-alias-deps -opaque -open Lemonade -o src/.lemonade.objs/byte/lemonade__Lemonade_State.cmi -c -intf src/lemonade_State.rei.mli)
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.lemonade.objs/byte -no-alias-deps -opaque -open Lemonade -o src/.lemonade.objs/byte/lemonade__Lemonade_Stream.cmi -c -intf src/lemonade_Stream.rei.mli)
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.lemonade.objs/byte -no-alias-deps -opaque -open Lemonade -o src/.lemonade.objs/byte/lemonade__Lemonade_Success.cmi -c -intf src/lemonade_Success.rei.mli)
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.lemonade.objs/byte -no-alias-deps -opaque -open Lemonade -o src/.lemonade.objs/byte/lemonade__Lemonade_Writer.cmi -c -intf src/lemonade_Writer.rei.mli)
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.lemonade.objs/byte -intf-suffix .ml -no-alias-deps -opaque -open Lemonade -o src/.lemonade.objs/byte/lemonade__Lemonade_Continuation.cmo -c -impl src/lemonade_Continuation.re.ml)
+> File "src/lemonade_Continuation.re", line 33, characters 24-42:
+> 33 |   module MethodsMonad = Mixture_Monad.Make(Basis);
+>                              ^^^^^^^^^^^^^^^^^^
+> Error: Unbound module Mixture_Monad
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.lemonade.objs/byte -I src/.lemonade.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Lemonade -o src/.lemonade.objs/native/lemonade__Lemonade_Continuation.cmx -c -impl src/lemonade_Continuation.re.ml)
+> File "src/lemonade_Continuation.re", line 33, characters 24-42:
+> 33 |   module MethodsMonad = Mixture_Monad.Make(Basis);
+>                              ^^^^^^^^^^^^^^^^^^
+> Error: Unbound module Mixture_Monad
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.lemonade.objs/byte -I src/.lemonade.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Lemonade -o src/.lemonade.objs/native/lemonade__Lemonade_Lazy.cmx -c -impl src/lemonade_Lazy.re.ml)
+> File "src/lemonade_Lazy.re", line 22, characters 22-40:
+> 22 | module MethodsMonad = Mixture_Monad.Make(Basis);
+>                            ^^^^^^^^^^^^^^^^^^
+> Error: Unbound module Mixture_Monad
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.lemonade.objs/byte -intf-suffix .ml -no-alias-deps -opaque -open Lemonade -o src/.lemonade.objs/byte/lemonade__Lemonade_Lazy.cmo -c -impl src/lemonade_Lazy.re.ml)
+> File "src/lemonade_Lazy.re", line 22, characters 22-40:
+> 22 | module MethodsMonad = Mixture_Monad.Make(Basis);
+>                            ^^^^^^^^^^^^^^^^^^
+> Error: Unbound module Mixture_Monad
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.lemonade.objs/byte -I src/.lemonade.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Lemonade -o src/.lemonade.objs/native/lemonade__Lemonade_Type.cmx -c -impl src/lemonade_Type.re.ml)
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.lemonade.objs/byte -I src/.lemonade.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Lemonade -o src/.lemonade.objs/native/lemonade__Lemonade_List.cmx -c -impl src/lemonade_List.re.ml)
+> File "src/lemonade_List.re", line 22, characters 22-40:
+> 22 | module MethodsMonad = Mixture_Monad.Make(Basis);
+>                            ^^^^^^^^^^^^^^^^^^
+> Error: Unbound module Mixture_Monad
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.lemonade.objs/byte -intf-suffix .ml -no-alias-deps -opaque -open Lemonade -o src/.lemonade.objs/byte/lemonade__Lemonade_List.cmo -c -impl src/lemonade_List.re.ml)
+> File "src/lemonade_List.re", line 22, characters 22-40:
+> 22 | module MethodsMonad = Mixture_Monad.Make(Basis);
+>                            ^^^^^^^^^^^^^^^^^^
+> Error: Unbound module Mixture_Monad
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.lemonade.objs/byte -I src/.lemonade.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Lemonade -o src/.lemonade.objs/native/lemonade__Lemonade_Ok.cmx -c -impl src/lemonade_Ok.re.ml)
+> File "src/lemonade_Ok.re", line 31, characters 17-35:
+> 31 | module Methods = Mixture_Monad.Make(Basis);
+>                       ^^^^^^^^^^^^^^^^^^
+> Error: Unbound module Mixture_Monad
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.lemonade.objs/byte -intf-suffix .ml -no-alias-deps -opaque -open Lemonade -o src/.lemonade.objs/byte/lemonade__Lemonade_Ok.cmo -c -impl src/lemonade_Ok.re.ml)
+> File "src/lemonade_Ok.re", line 31, characters 17-35:
+> 31 | module Methods = Mixture_Monad.Make(Basis);
+>                       ^^^^^^^^^^^^^^^^^^
+> Error: Unbound module Mixture_Monad
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.lemonade.objs/byte -intf-suffix .ml -no-alias-deps -opaque -open Lemonade -o src/.lemonade.objs/byte/lemonade__Lemonade_Reader.cmo -c -impl src/lemonade_Reader.re.ml)
+> File "src/lemonade_Reader.re", line 35, characters 24-42:
+> 35 |   module MethodsMonad = Mixture_Monad.Make(Basis);
+>                              ^^^^^^^^^^^^^^^^^^
+> Error: Unbound module Mixture_Monad
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.lemonade.objs/byte -I src/.lemonade.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Lemonade -o src/.lemonade.objs/native/lemonade__Lemonade_Retry.cmx -c -impl src/lemonade_Retry.re.ml)
+> File "src/lemonade_Retry.re", line 29, characters 10-25:
+> 29 |   include Mixture_Monad.S;
+>                ^^^^^^^^^^^^^^^
+> Error: Unbound module Mixture_Monad
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.lemonade.objs/byte -I src/.lemonade.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Lemonade -o src/.lemonade.objs/native/lemonade__Lemonade_Reader.cmx -c -impl src/lemonade_Reader.re.ml)
+> File "src/lemonade_Reader.re", line 35, characters 24-42:
+> 35 |   module MethodsMonad = Mixture_Monad.Make(Basis);
+>                              ^^^^^^^^^^^^^^^^^^
+> Error: Unbound module Mixture_Monad
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.lemonade.objs/byte -intf-suffix .ml -no-alias-deps -opaque -open Lemonade -o src/.lemonade.objs/byte/lemonade__Lemonade_Retry.cmo -c -impl src/lemonade_Retry.re.ml)
+> File "src/lemonade_Retry.re", line 29, characters 10-25:
+> 29 |   include Mixture_Monad.S;
+>                ^^^^^^^^^^^^^^^
+> Error: Unbound module Mixture_Monad
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.lemonade.objs/byte -I src/.lemonade.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Lemonade -o src/.lemonade.objs/native/lemonade__Lemonade_State.cmx -c -impl src/lemonade_State.re.ml)
+> File "src/lemonade_State.re", line 44, characters 24-42:
+> 44 |   module MethodsMonad = Mixture_Monad.Make(Basis);
+>                              ^^^^^^^^^^^^^^^^^^
+> Error: Unbound module Mixture_Monad
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.lemonade.objs/byte -intf-suffix .ml -no-alias-deps -opaque -open Lemonade -o src/.lemonade.objs/byte/lemonade__Lemonade_State.cmo -c -impl src/lemonade_State.re.ml)
+> File "src/lemonade_State.re", line 44, characters 24-42:
+> 44 |   module MethodsMonad = Mixture_Monad.Make(Basis);
+>                              ^^^^^^^^^^^^^^^^^^
+> Error: Unbound module Mixture_Monad
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.lemonade.objs/byte -I src/.lemonade.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Lemonade -o src/.lemonade.objs/native/lemonade__Lemonade_Success.cmx -c -impl src/lemonade_Success.re.ml)
+> File "src/lemonade_Success.re", line 17, characters 10-25:
+> 17 |   include Mixture_Monad.S;
+>                ^^^^^^^^^^^^^^^
+> Error: Unbound module Mixture_Monad
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.lemonade.objs/byte -intf-suffix .ml -no-alias-deps -opaque -open Lemonade -o src/.lemonade.objs/byte/lemonade__Lemonade_Success.cmo -c -impl src/lemonade_Success.re.ml)
+> File "src/lemonade_Success.re", line 17, characters 10-25:
+> 17 |   include Mixture_Monad.S;
+>                ^^^^^^^^^^^^^^^
+> Error: Unbound module Mixture_Monad
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.lemonade.objs/byte -I src/.lemonade.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Lemonade -o src/.lemonade.objs/native/lemonade__Lemonade_Writer.cmx -c -impl src/lemonade_Writer.re.ml)
+> File "src/lemonade_Writer.re", line 45, characters 24-42:
+> 45 |   module MethodsMonad = Mixture_Monad.Make(Basis);
+>                              ^^^^^^^^^^^^^^^^^^
+> Error: Unbound module Mixture_Monad
+[2]
+$ (cd _build/default && /Users/mando/.opam/4.12.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.lemonade.objs/byte -intf-suffix .ml -no-alias-deps -opaque -open Lemonade -o src/.lemonade.objs/byte/lemonade__Lemonade_Writer.cmo -c -impl src/lemonade_Writer.re.ml)
+> File "src/lemonade_Writer.re", line 45, characters 24-42:
+> 45 |   module MethodsMonad = Mixture_Monad.Make(Basis);
+>                              ^^^^^^^^^^^^^^^^^^
+> Error: Unbound module Mixture_Monad
+[2]

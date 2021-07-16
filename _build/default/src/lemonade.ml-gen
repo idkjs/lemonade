@@ -1,0 +1,46 @@
+(** @canonical Lemonade.Lemonade_Continuation *)
+module Lemonade_Continuation = Lemonade__Lemonade_Continuation
+
+
+(** @canonical Lemonade.Lemonade_Lazy *)
+module Lemonade_Lazy = Lemonade__Lemonade_Lazy
+
+
+(** @canonical Lemonade.Lemonade_List *)
+module Lemonade_List = Lemonade__Lemonade_List
+
+
+(** @canonical Lemonade.Lemonade_Maybe *)
+module Lemonade_Maybe = Lemonade__Lemonade_Maybe
+
+
+(** @canonical Lemonade.Lemonade_Ok *)
+module Lemonade_Ok = Lemonade__Lemonade_Ok
+
+
+(** @canonical Lemonade.Lemonade_Reader *)
+module Lemonade_Reader = Lemonade__Lemonade_Reader
+
+
+(** @canonical Lemonade.Lemonade_Retry *)
+module Lemonade_Retry = Lemonade__Lemonade_Retry
+
+
+(** @canonical Lemonade.Lemonade_State *)
+module Lemonade_State = Lemonade__Lemonade_State
+
+
+(** @canonical Lemonade.Lemonade_Stream *)
+module Lemonade_Stream = Lemonade__Lemonade_Stream
+
+
+(** @canonical Lemonade.Lemonade_Success *)
+module Lemonade_Success = Lemonade__Lemonade_Success
+
+
+(** @canonical Lemonade.Lemonade_Type *)
+module Lemonade_Type = Lemonade__Lemonade_Type
+
+
+(** @canonical Lemonade.Lemonade_Writer *)
+module Lemonade_Writer = Lemonade__Lemonade_Writer

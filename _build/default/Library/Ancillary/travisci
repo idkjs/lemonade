@@ -1,0 +1,29 @@
+#!/bin/sh
+
+### travisci -- Continuous integration test for travis
+
+# Lemonade (https://github.com/michipili/lemonade)
+# This file is part of Lemonade
+#
+# Copyright © 2015 Michael Grünewald
+#
+# This file must be used under the terms of the CeCILL-B.
+# This source file is licensed as described in the file COPYING, which
+# you should have received as part of this distribution. The terms
+# are also available at
+# http://www.cecill.info/licences/Licence_CeCILL-B_V1-en.txt
+
+INSTALL_PREFIX="${HOME}/.local"
+
+eval $(opam config env --switch ${TRAVIS_OCAML_VERSION:?})
+
+if [ "${TRAVIS_ENABLE_PPX_REWRITER}" = "yes" ]; then
+    opam install ppx_tools
+fi
+
+autoconf
+./configure --prefix="${INSTALL_PREFIX}" --enable-ppx-rewriter=${TRAVIS_ENABLE_PPX_REWRITER}
+bmake -I "${INSTALL_PREFIX}/share/bsdowl" all
+bmake -I "${INSTALL_PREFIX}/share/bsdowl" test
+
+### End of file `travisci'

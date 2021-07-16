@@ -1,0 +1,6 @@
+description = ""
+requires = ""
+archive(byte) = "lemonade.cma"
+archive(native) = "lemonade.cmxa"
+plugin(byte) = "lemonade.cma"
+plugin(native) = "lemonade.cmxs"

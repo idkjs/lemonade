@@ -1,0 +1,4 @@
+(executable
+ (name ppx_lemonade)
+ (libraries ppxtools lemonade)
+ (public_name lemonade))
