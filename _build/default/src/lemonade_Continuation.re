@@ -30,7 +30,7 @@ module Make = (Final: FinalType) => {
     let bind = (m, f, cont) => m(x => (f(x))(cont));
   };
 
-  module MethodsMonad = Mixture_Monad.Make(Basis);
+  module MethodsMonad = Mixture.Mixture_Monad.Make(Basis);
 
   include Basis;
   include MethodsMonad;

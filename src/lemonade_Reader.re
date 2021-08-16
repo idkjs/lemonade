@@ -32,7 +32,7 @@ module Make = (Environment: EnvironmentType) => {
     let bind = (m, f, env) => f(m(env), env);
   };
 
-  module MethodsMonad = Mixture_Monad.Make(Basis);
+  module MethodsMonad = Mixture.Mixture_Monad.Make(Basis);
 
   include Basis;
   include MethodsMonad;
@@ -54,7 +54,7 @@ module Make = (Environment: EnvironmentType) => {
       let bind = (m, f, env) => M.bind(m(env), x => f(x, env));
     };
 
-    module MethodsMonadT = Mixture_Monad.Make(BasisT);
+    module MethodsMonadT = Mixture.Mixture_Monad.Make(BasisT);
 
     include BasisT;
     include MethodsMonadT;

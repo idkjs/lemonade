@@ -76,12 +76,12 @@ let filter_map = (f, lst) =>
 
 let filter = lst => filter_map(x => x, lst);
 
-module MethodsMonad = Mixture_Monad.Make(Basis);
+module MethodsMonad = Mixture.Mixture_Monad.Make(Basis);
 
 include Basis;
 include MethodsMonad;
 
-module T = (M: Mixture_Monad.S) => {
+module T = (M: Mixture.Mixture_Monad.S) => {
   module Germ = {
     type t('a) = M.t(option('a));
 
@@ -96,5 +96,5 @@ module T = (M: Mixture_Monad.S) => {
     let return = x => M.return(Some(x));
   };
 
-  include Mixture_Monad.Transformer.Make(Basis, M, Germ);
+  include Mixture.Mixture_Monad.Transformer.Make(Basis, M, Germ);
 };

@@ -28,6 +28,8 @@ feature.  In a shell visiting the repository, say
 ```console
 % autoconf
 % opam pin add lemonade .
+opam pin add mixture https://github.com/foretspaisibles/mixture.git
+opam pin add broken https://github.com/foretspaisibles/broken.git
 ```
 
 It is also possible to install **Lemonade** manually.

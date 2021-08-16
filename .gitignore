@@ -9,3 +9,8 @@ Makefile.config
 Makefile.local
 .product
 .merlin
+#
+# Local customization
+#
+_build
+doc.public

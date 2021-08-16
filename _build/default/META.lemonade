@@ -1,5 +1,6 @@
+version = "0.0.1"
 description = ""
-requires = ""
+requires = "mixture"
 archive(byte) = "lemonade.cma"
 archive(native) = "lemonade.cmxa"
 plugin(byte) = "lemonade.cma"

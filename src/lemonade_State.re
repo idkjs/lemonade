@@ -41,7 +41,7 @@ module Make = (State: StateType) => {
     };
   };
 
-  module MethodsMonad = Mixture_Monad.Make(Basis);
+  module MethodsMonad = Mixture.Mixture_Monad.Make(Basis);
 
   include Basis;
   include MethodsMonad;
@@ -76,7 +76,7 @@ module Make = (State: StateType) => {
         M.bind(m(state), ((state', x)) => (f(x))(state'));
     };
 
-    module MethodsMonadT = Mixture_Monad.Make(BasisT);
+    module MethodsMonadT = Mixture.Mixture_Monad.Make(BasisT);
 
     include BasisT;
     include MethodsMonadT;

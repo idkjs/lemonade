@@ -26,7 +26,7 @@ module type S = {
     | Success('a)
     | Error(error);
 
-  include Mixture_Monad.S;
+  include Mixture.Mixture_Monad.S;
 
   let throw: error => t('a);
   let catch: (t('a), error => t('a)) => t('a);
@@ -64,7 +64,7 @@ module Make = (Retry: RetryType) => {
     );
   };
 
-  module MethodsMonad = Mixture_Monad.Make(Basis);
+  module MethodsMonad = Mixture.Mixture_Monad.Make(Basis);
 
   include Basis;
   include MethodsMonad;

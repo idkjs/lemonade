@@ -1,1 +1,1 @@
-src/lemonade_List.re.ml: Format List Mixture_Monad
+src/lemonade_List.re.ml: Format List Mixture

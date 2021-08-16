@@ -93,7 +93,7 @@ module Make = (Monad: Lemonade_Type.S) => {
 
   let of_array = a => {
     let count = ref(0);
-    from(_ =>
+    from(_ =>{
       let c = count^;
       if (c < Array.length(a)) {
         incr(count);
@@ -101,12 +101,12 @@ module Make = (Monad: Lemonade_Type.S) => {
       } else {
         Monad.return(None);
       };
-    );
+    });
   };
 
   let of_string = a => {
     let count = ref(0);
-    from(_ =>
+    from(_ =>{
       let c = count^;
       if (c < String.length(a)) {
         incr(count);
@@ -114,7 +114,7 @@ module Make = (Monad: Lemonade_Type.S) => {
       } else {
         Monad.return(None);
       };
-    );
+   } );
   };
 
   let rec get_data: type v. (int, data(v)) => monad(data(v)) =

@@ -1,3 +1,8 @@
 (library
  (name lemonade)
- (public_name lemonade))
+ (public_name lemonade)
+ (libraries mixture))
+(env
+ (dev
+  (flags
+   (:standard -w -27 -w -32-39-9))))

@@ -1,11 +1,13 @@
-(lang dune 2.8)
+(lang dune 2.9)
 (name lemonade)
+(version 0.0.1)
 (library
  (name lemonade)
  (kind normal)
  (archives (byte lemonade.cma) (native lemonade.cmxa))
  (plugins (byte lemonade.cma) (native lemonade.cmxs))
  (native_archives lemonade.a)
+ (requires mixture)
  (main_module_name Lemonade)
  (modes byte native)
  (modules

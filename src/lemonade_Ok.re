@@ -28,7 +28,7 @@ module Basis: {
   let return = x => `Ok(x);
 };
 
-module Methods = Mixture_Monad.Make(Basis);
+module Methods = Mixture.Mixture_Monad.Make(Basis);
 
 include Basis;
 include Methods;
@@ -47,7 +47,7 @@ let pp_print = (f, pp) =>
   | `Ok(x) => Format.fprintf(pp, "`Ok(%a)", f, x)
   | `Error(mesg) => Format.fprintf(pp, "`Error(%S)", mesg);
 
-module T = (M: Mixture_Monad.S) => {
+module T = (M: Mixture.Mixture_Monad.S) => {
   module Germ: {
     type t('a) = M.t([ | `Ok('a) | `Error(string)]);
     let bind: (t('a), 'a => t('b)) => t('b);
@@ -66,5 +66,5 @@ module T = (M: Mixture_Monad.S) => {
     let return = x => M.return(`Ok(x));
   };
 
-  include Mixture_Monad.Transformer.Make(Basis, M, Germ);
+  include Mixture.Mixture_Monad.Transformer.Make(Basis, M, Germ);
 };
