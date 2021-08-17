@@ -1,2 +1,2 @@
 (lang dune 2.8)
-(name lemonade)
+(generate_opam_files true)

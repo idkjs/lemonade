@@ -1,7 +1,7 @@
 (test
  (name testPPX)
  (modules testPPX)
- (libraries lemonade broken)
+ (libraries lemonade lemonade.ppx broken)
  (preprocess
   (pps lemonade.ppx)))
 
