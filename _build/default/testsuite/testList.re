@@ -1,4 +1,4 @@
-/* TestList -- Test the list monad
+/** TestList -- Test the list monad
 
    Lemonade (https://github.com/michipili/lemonade)
    This file is part of Lemonade
@@ -12,9 +12,9 @@
    http://www.cecill.info/licences/Licence_CeCILL-B_V1-en.txt */
 
 open Broken;
-
+open Lemonade;
 module ListMaybe = Lemonade_List.T(Lemonade_Maybe);
-
+print_endline("testList.re");
 let pp_print_listmaybe_int = (pp, m) =>
   Lemonade_Maybe.pp_print(
     Lemonade_List.pp_print(Format.pp_print_int),
@@ -70,3 +70,4 @@ let () =
       ),
     ],
   );
+let () = Broken.main();

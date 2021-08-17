@@ -1,4 +1,4 @@
-/* TestPPX -- Test Preprocessor
+/** TestPPX -- Test Preprocessor
 
    Mixture (https://github.com/michipili/mixture)
    This file is part of Mixture
@@ -13,7 +13,7 @@
 
 open Printf;
 open Broken;
-
+open Lemonade;
 module Maybe = Lemonade_Maybe;
 
 let pp_print_maybe_bool = (pp, m) =>

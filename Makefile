@@ -11,32 +11,39 @@
 # are also available at
 # http://www.cecill.info/licences/Licence_CeCILL-B_V1-en.txt
 
-PACKAGE=		lemonade
-VERSION=		0.6.0-current
-OFFICER=		michipili@gmail.com
+.DEFAULT_GOAL := help
 
-.sinclude "Makefile.config"
+project_name = lemonade
+opam_file = $(project_name).opam
+DUNE = opam exec -- dune
 
-MODULE=			ocaml.lib:src
+help:
+	@echo "List of available make commands";
+	@echo "";
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-15s\033[0m %s\n", $$1, $$2}';
+	@echo "";
 
-.if!empty(ENABLE_PPX_REWRITER:Myes)
-MODULE+=		ocaml.prog:ppx
-.endif
+lock: ## Generate a lock file
+	opam lock . -y
 
-MODULE+=		ocaml.meta:meta
-MODULE+=		ocaml.manual:manual
+build: ## Build the app
+	$(DUNE) build @all
 
-SUBDIR=			testsuite
+watch: ## Build the app in watch mode
+	$(DUNE) build @all -w
 
-EXTERNAL=		ocaml.findlib:broken
-EXTERNAL+=		ocaml.findlib:mixture
+test: ## Run the tests
+	$(DUNE) runtest
 
-.if!empty(ENABLE_PPX_REWRITER:Myes)
-EXTERNAL+=		ocaml.findlib:ppx_tools.metaquot
-.endif
+clean:
+	@dune clean
+	rm -rf doc.public
 
-CONFIGURE+=		Makefile.config.in
+format: ## Format the code
+	dune build @fmt --auto-promote
 
-.include "generic.project.mk"
-
+docs: clean build ## Build the documentation
+	@dune build @doc
+	mkdir -p doc.public
+	cp -r _build/default/_doc/_html doc.public
 ### End of file `Makefile'

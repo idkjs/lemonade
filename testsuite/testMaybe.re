@@ -1,4 +1,4 @@
-/* TestMaybe -- Test the maybe monad
+/** TestMaybe -- Test the maybe monad
 
    Lemonade (https://github.com/michipili/lemonade)
    This file is part of Lemonade
@@ -12,7 +12,7 @@
    http://www.cecill.info/licences/Licence_CeCILL-B_V1-en.txt */
 
 open Broken;
-
+open Lemonade;
 module MaybeList = Lemonade_Maybe.T(Lemonade_List);
 
 let pp_print_maybelist_int = (pp, m) =>
@@ -70,3 +70,4 @@ let () =
       ),
     ],
   );
+let () = Broken.main();

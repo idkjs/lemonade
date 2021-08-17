@@ -1,5 +1,6 @@
 (library
  (name lemonade)
+ (modes byte native)
  (public_name lemonade)
  (libraries mixture))
 (env

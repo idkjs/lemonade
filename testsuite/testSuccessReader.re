@@ -1,4 +1,4 @@
-/* TestSuccessReader -- Test natural transformation
+/** TestSuccessReader -- Test natural transformation
 
    Mixture (https://github.com/michipili/lemonade)
    This file is part of Lemonade
@@ -13,7 +13,7 @@
 
 open Format;
 open Broken;
-
+open Lemonade;
 module Error = {
   type t = (string, string);
 };
@@ -96,3 +96,4 @@ let () =
       ),
     ],
   );
+let () = Broken.main();

@@ -81,3 +81,25 @@
     (kind alias)
     (impl))
    (wrapped true))))
+(library
+ (name lemonade.ppx)
+ (kind ppx_rewriter)
+ (archives (byte ppx/ppx_lemonade.cma) (native ppx/ppx_lemonade.cmxa))
+ (plugins (byte ppx/ppx_lemonade.cma) (native ppx/ppx_lemonade.cmxs))
+ (native_archives ppx/ppx_lemonade.a)
+ (requires ppxlib lemonade)
+ (main_module_name Ppx_lemonade)
+ (modes byte native)
+ (modules
+  (wrapped
+   (main_module_name Ppx_lemonade)
+   (modules
+    ((name Ppx_js) (obj_name ppx_lemonade__Ppx_js) (visibility public) (impl))
+    ((name Ppx_lemonade) (obj_name ppx_lemonade) (visibility public) (impl)))
+   (alias_module
+    (name Ppx_lemonade__)
+    (obj_name ppx_lemonade__)
+    (visibility public)
+    (kind alias)
+    (impl))
+   (wrapped true))))

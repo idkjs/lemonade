@@ -1,4 +1,4 @@
-/* TestStream -- Test monadic streams
+/** TestStream -- Test monadic streams
 
    Lemonade (https://github.com/michipili/lemonade)
    This file is part of Lemonade
@@ -13,7 +13,7 @@
 
 open Broken;
 open Format;
-
+open Lemonade;
 module Success =
   Lemonade_Success.Make({
     type t = string;
@@ -154,3 +154,4 @@ let () =
       ),
     ],
   );
+let () = Broken.main();

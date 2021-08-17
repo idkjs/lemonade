@@ -14,3 +14,9 @@ Makefile.local
 #
 _build
 doc.public
+listtransform.log
+maybe.log
+.gitignore
+success_reader.log
+stream.log
+.DS_Store

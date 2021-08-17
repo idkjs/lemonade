@@ -1,0 +1,26 @@
+(library
+ (name ppx_old)
+ (libraries ppxlib lemonade)
+ (public_name lemonade.ppx_old)
+ (modules ppx_old )
+ ; (modules (:standard))
+ (kind ppx_rewriter)
+ (preprocess
+  (pps ppxlib.metaquot)))
+
+(env
+ (dev
+  (flags
+   (:standard -w -27 -w -32-39-9))))
+
+; (library
+;  (name Ppx_enumerate)
+;  (public_name ppx-enumerate.lib)
+;  (modules (:standard))
+;  (libraries base ppxlib)
+;  (kind ppx_rewriter)
+;  (preprocess
+;   (pps ppxlib.metaquot ppxlib.runner))
+;  (flags -open Base))
+
+(include_subdirs unqualified)

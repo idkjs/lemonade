@@ -1,0 +1,31 @@
+(test
+ (name testPPX)
+ (modules testPPX)
+ (libraries lemonade broken)
+ (preprocess
+  (pps lemonade.ppx)))
+
+(test
+ (name testList)
+ (modules testList)
+ (libraries lemonade broken))
+
+(test
+ (name testStream)
+ (modules testStream)
+ (libraries lemonade broken))
+
+(test
+ (name testMaybe)
+ (modules testMaybe)
+ (libraries lemonade broken))
+
+(test
+ (name testSuccessReader)
+ (modules testSuccessReader)
+ (libraries lemonade broken))
+
+; (env
+;  (dev
+;   (flags
+;    (:standard -w -27 -w -32-39-9))))

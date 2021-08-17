@@ -1,0 +1,8 @@
+(library
+ (name ppx_monadic)
+ (public_name ppx-monadic)
+ (synopsis "Monad syntax ppx")
+ (libraries ppxlib)
+ (kind ppx_rewriter)
+ (preprocess
+  (pps ppxlib.metaquot)))
