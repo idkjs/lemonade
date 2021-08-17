@@ -1,9 +1,0 @@
-(library
- (name lemonade)
- (modes byte native)
- (public_name lemonade)
- (libraries mixture))
-(env
- (dev
-  (flags
-   (:standard -w -27 -w -32-39-9))))
